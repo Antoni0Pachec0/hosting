@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body{
+    background: #e4e4e4;
+    display: flex;
+    justify-content: center;
+}
+
+.container-publicacion{
+    position: relative;
+    margin-top: 50px;
+    width: 80%;
+    height: auto;
+    
+    display: block;
+    justify-content: center;
+}
+
+.container-publicacion h1{
+    position: relative;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.container-publicacion #publicacion{
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    height: auto;
+    background: #fff;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: auto;
+}

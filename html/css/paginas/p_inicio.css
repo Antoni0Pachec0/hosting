@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root{
+    --colorTextos: #0b0b0b;
+    --colorBotones: #503559;
+    --colorTextosClaro: #f3e5f5;
+    --colorFondos: #d6c8de;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+}
+
+body{
+    background: #fff;
+}
+
+/* --- Contenido Superior --- */
+
+.inicio{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #1c1c1c;
+    top: 70px;
+}
+
+.inicio .fondo{
+    width: 100%;
+    height: 100%;
+    background: url('https://www.10wallpaper.com/wallpaper/1366x768/1410/Beautiful_Lilac_Flowers-HD_Photo_Wallpaper_1366x768.jpg');   
+    background-position: center;
+    background-size: cover;
+    opacity: .5;
+}
+
+.info_s{
+    width: 40%;
+    height: 60%;
+    border: 5px solid var(--colorTextosClaro);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.info_s h1{
+    text-align: center;
+    font-size: 60px;
+    font-weight: 500;
+    color: var(--colorTextosClaro);
+}
+
+.info_s p{
+    text-align: center;
+    position: relative;
+    top: 25%;
+    color: var(--colorFondos);
+    font-size: 19px;
+    font-weight: 300;
+}
+
+/* --Contenido Medio-- */
+
+.s-cursos{
+    position: relative;
+    width: 100%;
+    
+    height: 200vh;
+    justify-content: space-between;
+    display: flex;
+    margin-top: 80px;
+}
+
+.slider-frame{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    bottom: 0;
+    margin: auto;
+}
+
+.slider-frame ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+}
+
+.slider-frame li{
+    list-style: none;
+    width: 100%;
+}
+
+.slider-frame img{
+    width: 100%;
+    animation: slide 16s infinite alternate ease-in-out;
+}
+
+@keyframes slide {
+    0%{margin-left: 0%;}
+    20%{margin-left: 0%;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    95%{margin-left: -300%;}
+}
+
+.s-cursos .cursos{
+    position: relative;
+    width: 30%;
+    height: 45%;
+    background: #d6c8de;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 30px;
+}
+
+.s-cursos .cursos .img{
+    position: relative;
+    height: 60%;
+}
+
+.cursos #culturales{
+    background: url('https://historia-arte.com/_/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpbSI6WyJcL21vdmVtZW50XC9pbWFnZUZpbGVcL2ZyYWdvbmFyZF8tX3N3aW5nLmpwZyIsInJlc2l6ZUNyb3AsNDAwLDQwMCJdfQ.RjZ6gz-oj3WhVLqdJb28EDtMlWcaU5InTzehpp_97IM.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.cursos #academicos{
+    background: url('https://www.explora.cl/wp-content/uploads/2020/04/antoine-dautry-05A-kdOH6Hw-unsplash-735x470.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.cursos #verano{
+    background: url('https://www.cronista.com/files/image/417/417666/61c1f5f202c21_700_491!.jpg?s=e572bc1166bf8bb71577cf7248d70813&d=1640101363');
+    background-position: center;
+    background-size: cover;
+}
+
+
+.s-cursos .cursos h2{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--colorTextos);
+}
+
+.s-cursos .cursos p{
+    position: relative;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 300;
+    color: var(--colorTextos);
+    margin: 10px;
+}
+
+.s-cursos .cursos a{
+    position: absolute;
+    width: 50%;
+    height: 40px;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: none;
+    background: var(--colorBotones);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .2s ease;
+    text-align: center;
+    text-decoration: none;
+}
+
+.s-cursos .cursos a:hover{
+    transform: scale(1.1);
+}
+
+
+/* --Contenido Inferior-- */
+
+.info{
+    position: relative;
+    margin-top: 20px;
+    
+    width: 100%;
+    height: 160vh;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.info h2{
+    position: relative;
+    font-size: 50px;
+    font-weight: 500;
+    top: 30px;
+    text-align: center;
+}
+
+.info div{
+    position: absolute;
+    width: 65%;
+    height: auto;
+    top: 150px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.info div p{
+    font-size: 25px;
+    text-align: center;
+}
+
+.info img{
+    position: absolute;
+    width: 80%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 3px;
+}
+

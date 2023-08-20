@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root{
+    --colorTextos: #0b0b0b;
+    --colorBotones: #503559;
+    --colorTextosClaro: #f3e5f5;
+    --colorFondos: #d6c8de;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins' , sans-serif;
+}
+
+body{
+    background: #020410;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 12.5%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar a{
+    position: relative;
+    font-size: 16px;
+    color: var(--colorTextosClaro);
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 30px;
+}
+
+.navbar a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: var(--colorTextosClaro);
+    border-radius: 5px;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: .5s;
+}
+
+.navbar a:hover::after{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+.background{
+    width: 100%;
+    height: 100vh;
+    background: url('https://scontent.fpbc1-1.fna.fbcdn.net/v/t1.6435-9/165648662_3356401994459332_5947723791569172298_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=a26aad&_nc_ohc=Dnz6P4ABUQQAX93S3or&_nc_ht=scontent.fpbc1-1.fna&oh=00_AfAQXq0DmimklexEds0e8kbwO2DKtffCbdpelcJsqlwOgQ&oe=65060FF5') no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px);
+}
+
+.container{
+    position: absolute;
+    width: 75%;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url('https://scontent.fpbc1-1.fna.fbcdn.net/v/t1.6435-9/165648662_3356401994459332_5947723791569172298_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=a26aad&_nc_ohc=Dnz6P4ABUQQAX93S3or&_nc_ht=scontent.fpbc1-1.fna&oh=00_AfAQXq0DmimklexEds0e8kbwO2DKtffCbdpelcJsqlwOgQ&oe=65060FF5') no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.container .content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 58%;
+    height: 100%;
+    background: transparent;
+    padding: 80px;
+    color: var(--colorTextosClaro);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.content .logo{
+    font-size: 30px;
+}
+
+.text-sci h2{
+    font-size: 40px;
+    line-height: 1;
+}
+.text-sci h2 span{
+    font-size: 25px;
+}
+
+.text-sci p{
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.social-icons a i{
+    font-size: 22px;
+    color: #e4e4e4;
+    margin-right: 10px;
+    transition: .3s ease;
+}
+
+.social-icons a:hover i{
+    transform: scale(1.2);
+}
+
+.container #difuser{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -100;
+    opacity: .3;
+    background: #000;
+    border-radius: 10px;
+}
+
+.container .logreg-box{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 58%);
+    height: 100%;
+    overflow: hidden;
+}
+
+.logreg-box .form-box{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    backdrop-filter: blur(15px);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 15px;
+    color: var(--colorTextosClaro);
+}
+
+.logreg-box .form-box.login{
+    transform: translateX(0);
+    transition: transform .6s ease;
+    transition-delay: .7s;
+}
+
+.logreg-box.active .form-box.login{
+    transform: translateX(430px);
+    transition-delay: 0s;
+}
+
+.logreg-box .form-box.register{
+    transform: translateX(430px);
+    transition: transform .6s ease;
+    transition-delay: 0s;
+}
+
+.logreg-box.active .form-box.register{
+    transform: translateX(0);
+    transition-delay: .7s;
+}
+
+.logreg-box h2{
+    font-size: 32px;
+    text-align: center;
+}
+
+.form-box .input-box{
+    position: relative;
+    width: 340px;
+    height: 50px;
+    border-bottom: 2px solid  var(--colorTextosClaro);
+    margin: 20px 0;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: var(--colorTextosClaro);
+    font-weight: 500;
+    padding-right: 28px;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s ease;
+}
+
+.input-box input:focus~label, .input-box input:valid~label{
+    top: -5px;
+}
+
+.input-box .icon{
+    position: absolute;
+    top: 13px;
+    right: 0;
+    font-size: 19px;
+}
+
+.input-box .show-hide{
+    position: absolute;
+    top: 13px;
+    right: 25px;
+    font-size: 19px;
+    background: none;
+    border: none;
+    color: var(--colorTextosClaro);
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.form-box .remember-forgot{
+    font-size: 14.5px;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input{
+    accent-color: var(--colorTextosClaro);
+    margin-right: 3px;
+}
+
+.remember-forgot a{
+    color: var(--colorTextosClaro);
+    text-decoration: none;
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.btn{
+    width: 100%;
+    height: 45px;
+    background: var(--colorBotones);
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--colorTextosClaro);
+    font-weight: 500;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+}
+
+.form-box .login-register{
+    font-size: 14.5px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.login-register p a{
+    color: var(--colorTextosClaro);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-register p a:hover{
+    text-decoration: underline;
+}

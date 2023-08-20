@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/*Pseudoclases para los colores*/
+:root{
+    --colorTextos: #0b0b0b;
+    --colorBotones: #503559;
+    --colorBotonesClaro: #d58cfc;
+    --colorTextosClaro: #f3e5f5;
+    --colorFondos: #d6c8de;
+}
+
+/*Reiniciamos los tamaños y margenes*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+}
+
+body{
+    background: #dadada;
+}
+
+/*----Contenido central----*/
+
+/*Parte superior*/
+.superior{
+    width: 100%;
+    height: 90vh;
+    background: #1c1c1c;
+    top: 70px;
+    position: relative;
+}
+
+.superior{
+    .info{
+        position: absolute;
+        width: 35%;
+        height: 50%;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        left: 10%;
+    }
+
+    .info h1{
+        font-size: 60px;
+        font-weight: 500;
+        color: var(--colorTextosClaro);
+    }
+
+    .info p{
+        position: absolute;
+        bottom: 0;
+        color: var(--colorTextosClaro);
+    }
+
+    .img{
+        position: absolute;
+        height: 50%;
+        width: 35%;
+        right: 10%;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        overflow: hidden;
+        background: url('https://scontent.fpbc1-1.fna.fbcdn.net/v/t1.6435-9/74236010_2152402064859337_1805280883150684160_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=a26aad&_nc_ohc=rdu66vhkWt4AX8DCj54&_nc_ht=scontent.fpbc1-1.fna&oh=00_AfD1v4iifs4jG-f8H18FLEqZZMZvgHgaXBvsj6cQylkfhA&oe=65061BCB');
+        background-size: cover;
+        background-position: center;
+        border-radius: 5px;
+    }
+
+    .background{
+        width: 100%;
+        height: 100%;
+        background: url('https://2.bp.blogspot.com/-CTDg5kEEbFQ/UPVsPXCplkI/AAAAAAAAzKc/5TPWB_96xJI/s1600/Vista-de-un-atardecer-en-la-orilla-de-la-playa_imagenes-hd-de-playas-y-atardeceres.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: .5;
+    }
+}
+
+/*Parte media*/
+.medio{
+    width: 100%;
+    height: 200vh;
+    position: relative;
+    margin-top: 150px;
+}
+
+.medio div{
+    position: relative;
+    width: 60%;
+    height: auto;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.medio div p{
+    font-size: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.medio #imagen{
+    position: relative;
+    margin-top: 90px;
+    height: 115vh;
+    width: 100%;
+    background: url('https://scontent.fpbc1-1.fna.fbcdn.net/v/t1.6435-9/67433757_1985856558180556_2178234750550933504_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=a26aad&_nc_ohc=Y98O-N0F4rMAX9Q1YY7&_nc_ht=scontent.fpbc1-1.fna&oh=00_AfD69RJRNbQglmfnN4cv98zE2d9gT6X3CAq2vrYKq9N0sQ&oe=65060DC3');
+    background-size: cover;
+    background-position: center;
+}
+
+/*Parte inferior*/
+.inferior{
+    width: 100%;
+}
+
+/*Tamaño y posicion contenedor*/
+.inferior .info-cursos{
+    width: 80%;
+    background: #fff;
+    padding: 30px;
+    border-radius: 3px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/*Tamaño y posicion del contenedos de las pestañas*/
+.inferior .info-cursos .tab_box{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid #1c1c1c;
+    position: relative;
+}
+
+/*Tamaño y posicion de las pestañas*/
+.inferior .info-cursos .tab_box .tab_btn{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--colorTextos);
+    background: none;
+    border: none;
+    padding: 18px;
+    cursor: pointer;
+    outline: none;
+}
+
+/*Si se presiona una pestaña, el color de fuente cambia con animacion*/
+.inferior .info-cursos .tab_box .tab_btn.active{
+    color: var(--colorBotonesClaro);
+    transition: all .3s ease-in-out;
+}
+
+/*Caja de contenido, el height y width es automatico*/
+.inferior .info-cursos .content_box{
+    padding: 20px;
+}
+
+/*Display none oculta el contenido y cuando esté activa una pestaña aparece con animacion*/
+.inferior .info-cursos .content_box .content{
+    display: none;
+    animation: moving .5s ease;
+}
+
+/*Animacion para mostrar el contenido*/
+@keyframes moving{
+    from{transform: translateX(50px); opacity: 0;}
+    to{transform: translateX(0px); opacity: 1;}
+}
+
+/*Posicionamiento de la informacion*/
+.inferior .info-cursos .content_box .content .informacion{
+    width: 100%;
+    right: 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.inferior .info-cursos .content_box .content .informacion div{
+    width: 55%;
+    color: var(--colorTextos);
+}
+
+.inferior .info-cursos .content_box .content .informacion .imgn{
+    width: 43%;
+    height: 270px;
+    right: 0;
+}
+
+/*Fondos de las imagenes de todos los contenidos, el ID está en orden de izquierda a derecha tomando las pestañas de referencia*/
+.inferior .info-cursos .content_box .content .informacion{
+    #c1{
+        background: url('https://static.leonoticias.com/www/multimedia/202107/06/media/MM-senderismo-asturias/oddle-1-ksRC--1350x900@El%20Comercio.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    #c2{
+        background: url('https://www.ifam.es/colombia/wp-content/uploads/sites/13/2015/08/imagenes-de-paisajes-hermosos-4.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    #c3{
+        background: url('https://res.cloudinary.com/simpleview/image/upload/v1613600936/clients/norway/Urnes_Stave_Church_luster_fjord_Norway_photo_Thomas_Morel_646b0cd1-2926-4b68-867e-8d4a6abba6b2.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    #c4{
+        background: url('https://viaturi.com/wp-content/uploads/2017/08/fiordos-noruegos-mas-bonitos.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+/*Cuando se presione una pestaña, el display cambia para mostrar solo el contenido correspondiente a esa pestaña*/
+.inferior .info-cursos .content_box .content.active{
+    display: block;
+}
+
+/*Tamaño, posicion y transicion de la linea*/
+.inferior .info-cursos .tab_box .line{
+    position: absolute;
+    top: 62px;
+    left: 75px;
+    width: 90px;
+    height: 5px;
+    background-color: var(--colorBotonesClaro);
+    transition: all .3s ease-in-out;
+}
+
